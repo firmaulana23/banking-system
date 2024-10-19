@@ -22,7 +22,18 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
     labels: ['BCA', 'Mandiri', 'BNI']
   }
 
-  return <Doughnut data={data} />
+  return <Doughnut 
+  data={data} 
+  options={
+    {
+      cutout: '60%',
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+  }}
+  />
 
   // return <Doughnut 
   //   data={data} 
